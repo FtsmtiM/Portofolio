@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
 	</head>
 	<body class="is-preload">
 
@@ -32,7 +33,7 @@
                             </header>
                             <a href="#work" class="jumplink pic">
                                 <span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-                                <img src="images/me.jpg" alt="" />
+                                <img src="images/code.jpg" alt="" />
                             </a>
                         </article>
 
@@ -47,7 +48,15 @@
                             <section>
                                 <div class="row">
                                     <div class="col-6 col-6-medium col-12-small">
-                                        <a href="#" class="image fit"><img src="images/WearMe6.png" alt=""></a>
+					<div class="row">
+						<div class="col-12-small">
+                                        		<a href="http://www.wearme.somee.com/" class="image fit" ><img src="images/WearMe6.png" alt=""></a>
+						</div>
+						 <div class="col-12-small">
+                                        		<a href="http://www.translatetigrigna.somee.com/swagger/index.html" class="image fit" ><img src="images/TransApi.png" alt=""></a>
+                                    		</div>
+					</div>
+
                                     </div>
 			        
                                     <div class="col-6 col-6-medium col-12-small">
@@ -56,6 +65,7 @@
                                         <!-- <iframe src="//slideful.com/v20191007_1900309958085949_ijf.htm?v=14&r=433506757" frameborder="0" style="border:0px;padding:0px;margin:0px;width:480px;height:358px;" allowtransparency="true" class="slideful_20191007_1900309958085949_iframe"></iframe>-->
                                     </div>
                                 </div>
+				
                             </section>
                         </article>
                         <!--<div class="col-4 col-6-medium col-12-small">
@@ -93,7 +103,7 @@
                             <header>
                                 <h2>Contact Me</h2>
                             </header>
-                            <form action="#" method="post">
+                            <form method="post" name="contactform" action="#thankyou">
                                 <div>
                                     <div class="row">
                                         <div class="col-6 col-12-medium">
@@ -115,6 +125,16 @@
                                 </div>
                             </form>
                         </article>
+			
+			 <!-- Thank you -->
+                        <article id="thankyou" class="panel">
+                            <header>
+                                <h2>Thank you!</h2>
+                            </header>
+			    
+			   <h3>Thank you for submitting the form. We will contact you soon!</h3>
+	
+			</article>
 
                     </div>
 
@@ -128,6 +148,16 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script language="JavaScript">
+		
+// Code for validating the form
+// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+// for details
+				var frmvalidator  = new Validator("contactform");
+				frmvalidator.addValidation("name","req","Please provide your name"); 
+				frmvalidator.addValidation("email","req","Please provide your email"); 
+				frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+			</script>
 
 	</body>
 </html>
